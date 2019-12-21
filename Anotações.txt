@@ -1,0 +1,20 @@
+Criei yarn dentro dessa pasta com : yarn init.
+Depois disso eu fui alocando extensões como yarn add @babel/cli
+Depois eu aloquei outra com yarn add @babel/preset-env
+
+OBS: Essa pasta node_modules é muito pesada, então é importante deixar ela no desktop criando um arquivo .gitignore
+e escrevendo nesse arquivo node_modules/.
+
+Criei um arquivo .babelrc para configurar o babel.
+Criei dois arquivos: o index.html e o main.js.
+instalei o @babel/core
+criei um script no packet.json
+rodei o script com yarn dev
+
+Obs: O importante da aula foi visualizar a permutação de código funcional que é o padrão js para uma forma
+que todos os navegadores usam e reconhecem.
+
+Depois de tudo isso, foi criado a estrutura padrão html e a tag script indicando o caminho bundle.
+Depois foi rodado.
+
+Fim da aula configurando babel.
