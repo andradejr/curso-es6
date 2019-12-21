@@ -1,0 +1,2 @@
+Explica a função de uma constante e a diferença entre mudar uma variável e mutação.
+Posso também declara uma variável com let e const.

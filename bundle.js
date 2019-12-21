@@ -1,25 +1,29 @@
 "use strict";
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+//Isso é um exemplo de função do ES6 (Função map)
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var newarr = arr.map(function (item) {
+  return item * 2;
+}); //console.log(newarr);
+//A função também pode conter um index.
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+var arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var newarr2 = arr2.map(function (item, index) {
+  return item + index;
+}); //console.log(newarr2);
+//Essa função percorre todo o array e faz uma op.
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+var sum = arr.reduce(function (total, next) {
+  return total + next;
+}); //console.log(sum);
+//Essa outra operação com array filtra o próprio.
 
-var Teste =
-/*#__PURE__*/
-function () {
-  function Teste() {
-    _classCallCheck(this, Teste);
-  }
+var filter = arr.filter(function (item) {
+  return item % 2 === 0;
+}); //console.log(filter);
+//Essa outra operação é para encontra um element.
 
-  _createClass(Teste, [{
-    key: "metodo",
-    value: function metodo() {}
-  }, {
-    key: "outro",
-    value: function outro() {}
-  }]);
-
-  return Teste;
-}();
+var find = arr.find(function (item) {
+  return item === 4;
+});
+console.log(find);

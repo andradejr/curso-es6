@@ -1,0 +1,2 @@
+Operações em array:
+Mostra várias operações de tratamento de arrays.
