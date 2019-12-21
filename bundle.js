@@ -1,32 +1,20 @@
 "use strict";
 
-//Arrow functions
+//Valores padrões
 
 /*
-const arr = [1,2,3,4,5,6,7,8,9];
-const newarr = arr.map( item => item * 2);
-console.log(newarr);
-*/
-//Outra forma de sintaxe para function
-
-/*const teste = () => {
-    return "Teste";
+function soma(a = 3,b = 6){
+    return a + b;
 }
-console.log(teste());
+console.log(soma(1));
+console.log(soma());
 */
-//Caso eu queira retornar um array:
-// No lugar do array pode ser uma string ou number.
-
-/*
-const teste = () => [1,2,3];
-console.log(teste());
-*/
-//Nesse caso ele já retorna os valores do array.
-// caso eu queira retornar um objeto na function
-var teste = function teste() {
-  return {
-    nome: "Diego"
-  };
+// Transformando o que tem em cima em arrow function
+var soma = function soma() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
+  return a + b;
 };
 
-console.log(teste());
+console.log(soma(1));
+console.log(soma());
