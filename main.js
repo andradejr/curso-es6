@@ -1,13 +1,26 @@
-//Valores padrões
+//Desestruturação
+const usuario = {
+    nome: "Diego",
+    idade: 23,
+    endereco: {
+     cidade:"Rio do sul",
+     estado:"SC",
+    },
+};
 /*
-function soma(a = 3,b = 6){
-    return a + b;
-}
-console.log(soma(1));
-console.log(soma());
+const nome = usuario.nome;
+const endereco = usuario.endereco.cidade;
 */
+// No ES6 é possível usar outra sintaxe para acessar dados de uma classe
 
-// Transformando o que tem em cima em arrow function
-const soma = (a = 3,b = 6) => a + b;
-console.log(soma(1));
-console.log(soma());
+/*
+const {nome,idade,endereco:{cidade}} = usuario;
+console.log(nome);
+console.log(idade);
+console.log(cidade);
+*/
+// É possível usar essa sintaxe numa function
+function mostranome({nome,idade}){
+    console.log(nome,idade);
+}
+mostranome(usuario);
