@@ -1,9 +1,17 @@
-//Templates Literals
-// Esse é um jeito muito grande de concatenação.
+//Object short syntax
 const nome = "Robson";
 const idade = 19;
-console.log("Meu nome é " + nome + " e eu tenho " + idade + " anos ");
-
-// Esse é um jeito mais simples
-
-console.log(`Meu nome é ${nome} e eu tenho ${idade} anos.`);
+/*
+const usuario = {
+    nome : nome,
+    idade : idade,
+    empresa : "Rocketseat"
+};
+*/
+// Quando a syntax acima aparecer a propriedade pode ser deixada sozinha.
+const usuario = {
+    nome,
+    idade,
+    empresa: "Rocketseat"
+};
+console.log(usuario);
