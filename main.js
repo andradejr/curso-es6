@@ -1,35 +1,26 @@
-//Isso é um exemplo de função do ES6 (Função map)
+//Arrow functions
+/*
 const arr = [1,2,3,4,5,6,7,8,9];
+const newarr = arr.map( item => item * 2);
+console.log(newarr);
+*/
 
-const newarr = arr.map(function(item){
-    return item * 2;
-});
-//console.log(newarr);
+//Outra forma de sintaxe para function
 
+/*const teste = () => {
+    return "Teste";
+}
+console.log(teste());
+*/ 
 
-//A função também pode conter um index.
-const arr2= [1,2,3,4,5,6,7,8,9];
-const newarr2 = arr2.map(function(item,index){
-    return item + index; 
-});
-//console.log(newarr2);
+//Caso eu queira retornar um array:
+// No lugar do array pode ser uma string ou number.
+/*
+const teste = () => [1,2,3];
+console.log(teste());
+*/
+//Nesse caso ele já retorna os valores do array.
 
-
-//Essa função percorre todo o array e faz uma op.
-const sum = arr.reduce(function (total,next){
-    return total + next;
-});
-//console.log(sum);
-
-//Essa outra operação com array filtra o próprio.
-const filter = arr.filter(function(item){
-    return item % 2 === 0 ;
-});
-
-//console.log(filter);
-
-//Essa outra operação é para encontra um element.
-const find = arr.find(function(item){
-    return item === 4 ;
-});
-console.log(find);
+// caso eu queira retornar um objeto na function
+const teste = () => ({nome:"Diego"});
+console.log(teste());
