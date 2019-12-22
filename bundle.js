@@ -90,11 +90,11 @@
 /*!********************!*\
   !*** ./funcoes.js ***!
   \********************/
-/*! exports provided: soma */
+/*! exports provided: soma, sub, mult */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\nfunction soma(a, b) {\n  return a + b;\n}\n\n//# sourceURL=webpack:///./funcoes.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sub\", function() { return sub; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"mult\", function() { return mult; });\n/*\r\nexport function soma(a,b){\r\n    return a + b;\r\n}\r\n*/\n\n/*\r\nexport function sub(a,b){\r\n    return a - b ;\r\n}\r\n*/\n\n/*\r\nexport default function so(a,b){\r\n    return a + b;\r\n}\r\nexport function soma(a,b){\r\n   return a + b;\r\n}\r\n*/\nfunction soma(a, b) {\n  return a + b;\n}\nfunction sub(a, b) {\n  return a - b;\n}\nfunction mult(a, b) {\n  return a * b;\n}\n\n//# sourceURL=webpack:///./funcoes.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _funcoes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./funcoes */ \"./funcoes.js\");\n// Instalando o webpack => Permite que se tenha acesso de muitos arquivos js\n// Instalando o webpack com yarn add webpack webpack-cli -D\n//Lembrando que foi mudado o package.json alterando dependences por devDependences\n//Foi criado um arquivo chamado webpack.config.js e também um funcoes.js\n//Testando o webpack\n\nconsole.log(Object(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"soma\"])(1, 2));\n\n//# sourceURL=webpack:///./main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _funcoes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./funcoes */ \"./funcoes.js\");\n// Instalando o webpack => Permite que se tenha acesso de muitos arquivos js\n// Instalando o webpack com yarn add webpack webpack-cli -D\n//Lembrando que foi mudado o package.json alterando dependences por devDependences\n//Foi criado um arquivo chamado webpack.config.js e também um funcoes.js\n//Testando o webpack\n\n/*\r\nimport {soma} from './funcoes';\r\nconsole.log(soma(1,2));\r\nimport {sub} from './funcoes';\r\nconsole.log(sub(4,2));\r\n*/\n// Existe também o caso da function default como vai ser mostrado abaixo\n//import soma from './funcoes';\n// Podemos também renomear as funções encaminhadas \n// Em um mesmo arquivo pode-se ter uma function default e várias outras normais e isso pode ser chamado do jeito abaixo\n\n/*\r\nimport so,{soma as somaFunction} from './funcoes';\r\nconsole.log(somaFunction(4,3));\r\n*/\n// Importando todas as funções.\n\nconsole.log(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"soma\"](1, 2));\nconsole.log(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"sub\"](8, 6));\nconsole.log(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"mult\"](8, 8));\n\n//# sourceURL=webpack:///./main.js?");
 
 /***/ })
 
