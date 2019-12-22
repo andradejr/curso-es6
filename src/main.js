@@ -1,4 +1,11 @@
-//Fazendo alterações no arquivo webpack
-//Instalado o webpack serve com yarn add webpack-dev-serve -D
-//Configurando o server no webpack
-alert('Opa!');
+//Async/Await
+const minhaPromise = () => new Promise((resolve,reject) => {
+    setTimeout(() => {resolve('Ok')},2000);
+})
+
+async function executaPromise(){
+    console.log(await minhaPromise());
+    console.log(await minhaPromise());
+    console.log(await minhaPromise());
+}
+executaPromise();
